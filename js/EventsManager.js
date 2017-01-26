@@ -16,6 +16,7 @@ var EventsManager = {
 	// EVENT_MOVE: CM.isiOS ? 'touchmove' : 'mousemove',
 	// EVENT_OVER: CM.isiOS ? 'touchstart' : 'mouseover',
 	// EVENT_OUT: CM.isiOS ? 'touchstart' : 'mouseout',
+        EVENT_CLICK: 'click',
 	EVENT_DOWN: 'pointerdown',
 	EVENT_UP: 'pointerup',
 	EVENT_MOVE: 'pointermove',

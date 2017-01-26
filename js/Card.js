@@ -367,7 +367,7 @@ Card.prototype.enableSelection = function(bool)
 	if (this.selectable === true)
 	{
 		this.jQueryElt.css('cursor', 'pointer');
-		this.jQueryElt.bind(EventsManager.EVENT_DOWN, jQuery.proxy(function(event) 
+		this.jQueryElt.bind(EventsManager.EVENT_CLICK, jQuery.proxy(function(event) 
 		{
 			// DO NOT allow drag when selection is blocked and only allow *left* lmb
 			if (game.blockedSelection === true || (event.button && (event.button !== 0)))
@@ -386,7 +386,7 @@ Card.prototype.enableSelection = function(bool)
 	{
 		// Console.log('unbind !');
 		this.jQueryElt.css('cursor', 'auto');
-		this.jQueryElt.unbind(EventsManager.EVENT_DOWN);
+		this.jQueryElt.unbind(EventsManager.EVENT_CLICK);
 	}
 }
 
