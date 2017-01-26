@@ -104,7 +104,7 @@ var WarpKlondikeMain = (function(game)
 		}
 	}
 
-	function hideSplash() { $('#splash').animate({opacity: 0}, 500).delay(500).hide(); }
+	function hideSplash() { $('#splash').animate({opacity: 0}, 50).delay(500).hide(); }
 
 	return {
 		status: 0,
@@ -123,9 +123,11 @@ var WarpKlondikeMain = (function(game)
 
 			Particles.init(CM.isiOS ? 8 : 32);
 
-			$('#splash .content').css('opacity', '1');
-			setTimeout(function() {  }, 2901);
-			setTimeout(hideSplash, 3000);
+			// $('#splash .content').css('opacity', 1);
+			// setTimeout(function() {  }, 2901);
+			// setTimeout(function() {  }, 1);
+			// setTimeout(hideSplash, 3000);
+                        hideSplash();
 
 			// TODO: add proper methods for that 
 			StateManager.init('1.0', function(gameOptions, status, scores)
